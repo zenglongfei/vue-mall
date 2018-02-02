@@ -12,7 +12,7 @@ export default {
   .loader-spinningDisc {
     margin: 0 auto;
     position: fixed;
-    top: 45%;
+    top: 42%;
     left: 42%;
     border: solid 0.5rem #9b59b6;
     border-right-color: transparent;

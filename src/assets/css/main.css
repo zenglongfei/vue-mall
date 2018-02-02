@@ -45,6 +45,24 @@
   color: #f8f8f9;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-size: 18px;
+}
+body {
+  position: relative;
+}
+
+.mainBox {
+  height: 90%;
+  width: 100%;
+  overflow: auto;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
 }
