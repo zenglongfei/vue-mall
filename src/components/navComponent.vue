@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <router-link replace="replace" tag="li" v-for="(item, i) in navArr" :key="i" @touchend.native="showPage(i)" :to="{name: item.navClass}"><div :class="{active: i === nowIndex}"><img :src="item.navPng"/><span>{{item.navName}}</span></div></router-link>
+      <router-link replace="replace" tag="li" v-for="(item, i) in navArr" :key="i" @click.native="showPage(i)" :to="{name: item.navClass}"><div class="shade"></div><div :class="{active: i === nowIndex}"><img :src="item.navPng"/><span>{{item.navName}}</span></div></router-link>
     </ul>
   </nav>
 </template>
@@ -39,18 +39,20 @@ export default {
     left: 0;
     width: 100%;
     z-index: 999;
+    -webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
+    -moz-user-select: none;
+    -webkit-touch-callout:none
   }
-
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     border-top: 1px solid #dddee1;
   }
-
   li {
     display: inline-block;
     width: 24.8%;
+    height: 100%;
     vertical-align: baseline;
     text-align: center;
     color: #80848f;
@@ -60,6 +62,13 @@ export default {
   }
   li:last-child {
     border: none;
+  }
+  .shade {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    z-index: 1000;
   }
   div.active {
     -webkit-filter: drop-shadow(0 80px #ed622a); /* Chrome, Safari, Opera */
