@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <router-link replace="replace" tag="li" v-for="(item, i) in navArr" :key="i" @click.native="showPage(i)" :to="{name: item.navClass}"><div class="shade"></div><div :class="{active: i === nowIndex}"><img :src="item.navPng"/><span>{{item.navName}}</span></div></router-link>
+      <router-link replace="replace" tag="li" v-for="(item, i) in navArr" :key="i" @click.native="showPage(i)" :to="{name: item.navClass}"><div :class="{active: i === nowIndex}"><span :class="item.navClass">{{item.navName}}</span></div></router-link>
     </ul>
   </nav>
 </template>
@@ -13,10 +13,10 @@ export default {
     return {
       nowIndex: 0,
       navArr: [
-        {navName: '首页', navClass: 'Home', navPng: require('../assets/img/icon-home.png')},
-        {navName: '分类', navClass: 'Classify', navPng: require('../assets/img/icon-classify.png')},
-        {navName: '购物车', navClass: 'Shopcar', navPng: require('../assets/img/icon-shopcar.png')},
-        {navName: '我的', navClass: 'My', navPng: require('../assets/img/icon-my.png')}
+        {navName: '首页', navClass: 'Home'},
+        {navName: '分类', navClass: 'Classify'},
+        {navName: '购物车', navClass: 'Shopcar'},
+        {navName: '我的', navClass: 'My'}
       ],
       navName: ['Home', 'Classify', 'Shopcar', 'My']
     }
@@ -38,12 +38,14 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 9.5%;
     z-index: 999;
     -webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
     -moz-user-select: none;
     -webkit-touch-callout:none
   }
   ul {
+    height: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -53,22 +55,13 @@ export default {
     display: inline-block;
     width: 24.8%;
     height: 100%;
-    vertical-align: baseline;
     text-align: center;
     color: #80848f;
     border-right: 0.5px solid #dddee1;
-    position: relative;
     outline: none;
   }
   li:last-child {
     border: none;
-  }
-  .shade {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 8%;
-    z-index: 1000;
   }
   div.active {
     -webkit-filter: drop-shadow(0 80px #ed622a); /* Chrome, Safari, Opera */
@@ -76,17 +69,31 @@ export default {
     position: relative;
     top: -80px;
   }
-  img {
-    display: inline-block;
-    margin-top: 2px;
-    width: 33%;
-    height: 33%
+  div {
+    height: 100%;
   }
   span {
     display: block;
+    height: 100%;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.78rem;
-    margin-top: -6px;
+    line-height: 5.2rem;
+  }
+  .Home {
+    background: url("../assets/img/icon-home.png") 50% 10% no-repeat;
+    background-size: 40%;
+  }
+  .Classify {
+    background: url("../assets/img/icon-classify.png") 50% 10% no-repeat;
+    background-size: 40%;
+  }
+  .Shopcar {
+    background: url("../assets/img/icon-shopcar.png") 50% 10% no-repeat;
+    background-size: 40%;
+  }
+  .My {
+    background: url("../assets/img/icon-my.png") 50% 10% no-repeat;
+    background-size: 40%;
   }
 </style>

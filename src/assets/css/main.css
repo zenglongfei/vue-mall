@@ -55,9 +55,16 @@ html, body {
 body {
   position: relative;
 }
+ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
 
 .mainBox {
-  height: 90%;
+  height: 90.5%;
   width: 100%;
   overflow: auto;
   z-index: 1000;

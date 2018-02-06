@@ -13,22 +13,34 @@ export default new Router({
     {
       path: '/Home',
       name: 'Home',
-      component: Home
+      component: Home,
+      meta: {
+        title: '首页'
+      }
     },
     {
       path: '/Classify',
       name: 'Classify',
-      component: Classify
+      component: Classify,
+      meta: {
+        title: '分类'
+      }
     },
     {
       path: '/Shopcar',
       name: 'Shopcar',
-      component: Shopcar
+      component: Shopcar,
+      meta: {
+        title: '购物车'
+      }
     },
     {
       path: '/My',
       name: 'My',
-      component: My
+      component: My,
+      meta: {
+        title: '我的'
+      }
     },
     {path: '/', redirect: 'Home'}
   ]
