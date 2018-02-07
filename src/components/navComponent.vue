@@ -40,9 +40,6 @@ export default {
     width: 100%;
     height: 9.5%;
     z-index: 999;
-    -webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
-    -moz-user-select: none;
-    -webkit-touch-callout:none
   }
   ul {
     height: 100%;
@@ -64,8 +61,8 @@ export default {
     border: none;
   }
   div.active {
-    -webkit-filter: drop-shadow(0 80px #ed622a); /* Chrome, Safari, Opera */
-    filter: drop-shadow(0 80px #ed622a);
+    -webkit-filter: drop-shadow(0 80px #2d8cf0); /* Chrome, Safari, Opera */
+    filter: drop-shadow(0 80px #2d8cf0);
     position: relative;
     top: -80px;
   }

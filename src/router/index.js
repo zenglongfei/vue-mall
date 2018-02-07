@@ -4,6 +4,7 @@ import Home from '../components/homeModule.vue'
 import Classify from '../components/classifyModule.vue'
 import Shopcar from '../components/shopcarModule.vue'
 import My from '../components/myModule.vue'
+import Search from '../components/searchModule.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,14 @@ export default new Router({
       component: My,
       meta: {
         title: '我的'
+      }
+    },
+    {
+      path: '/Search',
+      name: 'Search',
+      component: Search,
+      meta: {
+        title: '搜索'
       }
     },
     {path: '/', redirect: 'Home'}
