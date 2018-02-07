@@ -76,3 +76,14 @@ ul {
   left: 0;
   background: #fff;
 }
+
+.childrenBox {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 1001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+}

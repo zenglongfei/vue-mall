@@ -17,7 +17,17 @@ export default new Router({
       component: Home,
       meta: {
         title: '首页'
-      }
+      },
+      children: [
+        {
+          path: 'Search',
+          name: 'Search',
+          component: Search,
+          meta: {
+            title: '搜索'
+          }
+        }
+      ]
     },
     {
       path: '/Classify',
@@ -41,14 +51,6 @@ export default new Router({
       component: My,
       meta: {
         title: '我的'
-      }
-    },
-    {
-      path: '/Search',
-      name: 'Search',
-      component: Search,
-      meta: {
-        title: '搜索'
       }
     },
     {path: '/', redirect: 'Home'}
