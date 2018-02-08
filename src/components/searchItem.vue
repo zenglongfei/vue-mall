@@ -1,7 +1,7 @@
 <template>
   <div class="searchBox">
     <i class="scan" @click="test">扫一扫</i>
-    <router-link tag="div" class="search" :to="{name: 'Search'}">搜索商品/商铺</router-link>
+    <router-link replace tag="div" class="search" :to="{name: 'Search'}">搜索商品/商铺</router-link>
     <i class="message">消息</i>
   </div>
 </template>

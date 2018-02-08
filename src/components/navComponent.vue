@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted () {
-    this.nowIndex = this.navName.indexOf(this.$route.name)
+    this.nowIndex = this.navName.indexOf(this.$route.path.split('/')[1])
   },
   methods: {
     showPage (i) {

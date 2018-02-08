@@ -1,5 +1,5 @@
 <template>
-  <div class="childrenBox">
+  <div class="mainBox">
     这是搜索页面
   </div>
 </template>
