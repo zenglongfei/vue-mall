@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 export default {
   name: 'nav-component',
   data () {
@@ -22,16 +22,16 @@ export default {
       navName: ['Home', 'Classify', 'Shopcar', 'My']
     }
   },
-  computed: {
-    ...mapState({
-      navIndex: state => state.navIndex
-    })
-  },
+  // computed: {
+  //   ...mapState({
+  //     navIndex: state => state.navIndex
+  //   })
+  // },
   mounted () {
     this.nowIndex = this.navName.indexOf(this.$route.path.split('/')[1])
   },
   beforeUpdate () {
-    this.nowIndex = this.navName.indexOf(this.navIndex)
+    this.nowIndex = this.navName.indexOf(this.$route.path.split('/')[1])
   },
   methods: {
     showPage (i) {

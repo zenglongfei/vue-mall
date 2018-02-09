@@ -5,7 +5,7 @@ import Classify from '../components/classifyModule.vue'
 import Shopcar from '../components/shopcarModule.vue'
 import My from '../components/myModule.vue'
 import Search from '../components/searchModule.vue'
-import store from '../store/index.js'
+// import store from '../store/index.js'
 
 Vue.use(Router)
 
@@ -61,7 +61,7 @@ router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title
   }
-  store.commit('getNavIndex', to.path.split('/')[1])
+  // store.commit('getNavIndex', to.path.split('/')[1])
   next()
 })
 

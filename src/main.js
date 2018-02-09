@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import Dialog from './plugins/dialog.js'
 import router from './router/index.js'
-import store from './store/index.js'
+// import store from './store/index.js'
 
 Vue.use(Dialog)
 
@@ -14,6 +14,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: (h) => h(App),
-  store
+  render: (h) => h(App)
+  // store
 })
