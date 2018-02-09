@@ -6,15 +6,11 @@ Vue.use(Vuex)
 export default (
   new Vuex.Store({
     state: {
-      isLoading: false,
-      isLoadingHtml: true
+      navIndex: 0
     },
     mutations: {
-      showLoading (state, params) {
-        this.state.isLoading = params
-      },
-      showLoadingHtml (state, params) {
-        this.state.isLoadingHtml = params
+      getNavIndex (state, params) {
+        this.state.navIndex = params
       }
     }
   })

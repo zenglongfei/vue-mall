@@ -1,12 +1,13 @@
 <template>
   <nav>
     <ul>
-      <router-link replace="replace" tag="li" v-for="(item, i) in navArr" :key="i" @click.native="showPage(i)" :to="{name: item.navClass}"><div :class="{active: i === nowIndex}"><span :class="item.navClass">{{item.navName}}</span></div></router-link>
+      <router-link tag="li" v-for="(item, i) in navArr" :key="i" @click.native="showPage(i)" :to="{name: item.navClass}"><div :class="{active: i === nowIndex}"><span :class="item.navClass">{{item.navName}}</span></div></router-link>
     </ul>
   </nav>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'nav-component',
   data () {
@@ -21,8 +22,16 @@ export default {
       navName: ['Home', 'Classify', 'Shopcar', 'My']
     }
   },
+  computed: {
+    ...mapState({
+      navIndex: state => state.navIndex
+    })
+  },
   mounted () {
     this.nowIndex = this.navName.indexOf(this.$route.path.split('/')[1])
+  },
+  beforeUpdate () {
+    this.nowIndex = this.navName.indexOf(this.navIndex)
   },
   methods: {
     showPage (i) {
