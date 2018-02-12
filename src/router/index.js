@@ -10,7 +10,7 @@ import Search from '../components/searchModule.vue'
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/Home',
