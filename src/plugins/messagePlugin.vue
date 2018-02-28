@@ -36,7 +36,7 @@ export default {
 <style scoped>
   .message-box {
     position: fixed;
-    z-index: 999;
+    z-index: 1999;
     width: 100%;
     pointer-events: none;
     text-align: center;

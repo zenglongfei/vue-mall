@@ -40,9 +40,7 @@ const pulicFn = (plugin, option, config) => {
     ...config
   }
   for (let key in config) {
-    if (config.hasOwnProperty(key)) {
-      instance.$data[key] = config[key]
-    }
+    instance.$data[key] = config[key]
   }
   document.body.appendChild(instance.$mount().$el)
 }

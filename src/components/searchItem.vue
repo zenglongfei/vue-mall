@@ -2,7 +2,7 @@
   <div class="searchBox">
     <i class="scan" @click="test">扫一扫</i>
     <router-link tag="div" class="search" :to="{name: 'Search'}">搜索商品/商铺</router-link>
-    <i class="message">消息</i>
+    <i class="message" @click="messageShow">消息</i>
   </div>
 </template>
 
@@ -11,7 +11,18 @@ export default {
   name: 'search-item',
   methods: {
     test () {
-      console.log(1)
+      this.$Message()
+    },
+    messageShow () {
+      this.$Modal({
+        type: 1, // 标题；可选，默认1有标题；0无标题
+        cancel: null, // 点击取消回调函数；可选，默认无
+        sure: null, // 点击确定回调函数；可选，默认无
+        btn: ['取消', '确定'], // 按钮；可选，默认'取消','确定'两个按钮
+        btnShow: true, // 取消按钮是否隐藏；可选，默认显示；配合按钮使用
+        title: '系统提示2222', // 标题；可选，默认显示
+        content: '<p>这是一个modal对话框1111</p>' // 提示内容；可选，html模板
+      })
     }
   }
 }

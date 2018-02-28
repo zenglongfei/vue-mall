@@ -54,7 +54,7 @@ export default {
     right: 0;
     background-color: rgba(55,55,55,.4);
     height: 100%;
-    z-index: 1000;
+    z-index: 2000;
   }
   .modal-main {
     width: 80%;
@@ -65,7 +65,7 @@ export default {
     position: fixed;
     top: 33%;
     left: 10%;
-    z-index: 1001;
+    z-index: 2001;
     outline: 0;
   }
   .modal-header {
