@@ -1,7 +1,7 @@
 <template>
   <div class="searchBox">
     <i class="scan" @click="test">扫一扫</i>
-    <router-link tag="div" class="search" :to="{name: 'Search'}">搜索商品/商铺</router-link>
+    <router-link tag="div" class="search" :to="{name: 'Search', query: {num: 123}}">搜索商品/商铺</router-link>
     <i class="message" @click="messageShow">消息</i>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   name: 'search-item',
   methods: {
     test () {
-      this.$Message()
+      this.$router.push('/Home/Search')
     },
     messageShow () {
       this.$Modal({

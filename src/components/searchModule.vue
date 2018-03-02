@@ -1,12 +1,21 @@
 <template>
   <div class="mainBox">
-    这是搜索页面
+    这是搜索页面{{$route.query.num}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'search-module'
+  name: 'search-module',
+  mounted () {
+    console.log(this.$route)
+  },
+  beforeUpdate () {
+    console.log(this.$route)
+  },
+  updated () {
+    console.log('update')
+  }
 }
 </script>
 
