@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/cgi-bin/': {
+        target: 'https://api.weixin.qq.com/cgi-bin/',
+        changeOrigin: true, // 跨域配置，只在开发环境有用
+        pathRewrite: {
+          '^/cgi-bin': '/'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: '10.8.12.101', // can be overwritten by process.env.HOST

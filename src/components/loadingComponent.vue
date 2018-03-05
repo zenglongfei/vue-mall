@@ -10,6 +10,7 @@ export default {
 
 <style scoped>
   .loader-spinningDisc {
+    z-index: 1999;
     margin: 0 auto;
     position: fixed;
     top: 42%;

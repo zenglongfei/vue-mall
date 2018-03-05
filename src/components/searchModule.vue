@@ -1,6 +1,6 @@
 <template>
   <div class="mainBox">
-    这是搜索页面{{$route.query.num}}
+    这是搜索页面{{$route.query.name}}
   </div>
 </template>
 

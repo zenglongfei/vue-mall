@@ -1,19 +1,22 @@
 <template>
   <div class="mainBox">
-    <search-item/>
+    <head-item/>
     <swiper-item/>
+    <body-icon-item/>
     <div class="icpClass"><a target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备18019805号</a></div>
   </div>
 </template>
 
 <script>
+import HeadItem from './headItem.vue'
 import SwiperItem from './swiperItem.vue'
-import SearchItem from './searchItem.vue'
+import BodyIconItem from './bodyIconItem'
 
 export default {
   components: {
-    SearchItem,
-    SwiperItem
+    BodyIconItem,
+    SwiperItem,
+    HeadItem
   },
   name: 'home-module'
 }

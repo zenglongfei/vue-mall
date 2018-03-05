@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <loading-component v-show='isLoading' />
     <router-view/>
     <nav-component/>
   </div>
@@ -7,10 +8,19 @@
 
 <script>
 import NavComponent from './components/navComponent'
+import LoadingComponent from './components/loadingComponent'
+import { mapState } from 'vuex'
 
 export default {
-  components: {NavComponent},
-  name: 'App'
+  components: {
+    LoadingComponent,
+    NavComponent},
+  name: 'App',
+  computed: {
+    ...mapState({
+      isLoading: state => state.isLoading
+    })
+  }
 }
 </script>
 
