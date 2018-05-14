@@ -70,10 +70,10 @@ export default {
     border: none;
   }
   div.active {
-    -webkit-filter: drop-shadow(0 80px #2d8cf0); /* Chrome, Safari, Opera */
-    filter: drop-shadow(0 80px #2d8cf0);
+    -webkit-filter: drop-shadow(0 -80px #2d8cf0); /* Chrome, Safari, Opera */
+    filter: drop-shadow(0 -80px #2d8cf0);
     position: relative;
-    top: -80px;
+    top: 80px;
   }
   div {
     height: 100%;

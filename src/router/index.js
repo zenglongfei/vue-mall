@@ -17,7 +17,8 @@ const router = new Router({
       name: 'Home',
       component: Home,
       meta: {
-        title: '首页'
+        title: '首页',
+        index: 1
       }
     },
     {
@@ -25,7 +26,8 @@ const router = new Router({
       name: 'Classify',
       component: Classify,
       meta: {
-        title: '分类'
+        title: '分类',
+        index: 3
       }
     },
     {
@@ -33,7 +35,8 @@ const router = new Router({
       name: 'Shopcar',
       component: Shopcar,
       meta: {
-        title: '购物车'
+        title: '购物车',
+        index: 4
       }
     },
     {
@@ -41,7 +44,8 @@ const router = new Router({
       name: 'My',
       component: My,
       meta: {
-        title: '我的'
+        title: '我的',
+        index: 5
       }
     },
     {
@@ -49,7 +53,8 @@ const router = new Router({
       name: 'Search',
       component: Search,
       meta: {
-        title: '搜索'
+        title: '搜索',
+        index: 2
       }
     },
     {path: '/', redirect: 'Home'}
